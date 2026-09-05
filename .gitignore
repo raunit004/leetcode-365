@@ -1,0 +1,14 @@
+﻿# Automation tooling
+scaffold.py
+.gitattributes
+
+# Compiled Java files
+*.class
+*.jar
+
+# IDE & OS files
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
