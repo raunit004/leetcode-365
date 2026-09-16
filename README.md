@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-10%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-10%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-11%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-11%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 2 |
-| 🟡 **Medium** | 6 |
+| 🟡 **Medium** | 7 |
 | 🔴 **Hard** | 2 |
-| 🎯 **Total Solved** | 10 / 365 |
+| 🎯 **Total Solved** | 11 / 365 |
 
 ---
 
@@ -34,4 +34,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 008 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | String | `Medium` | $O(N)$ | $O(1)$ | [Java](solutions/day-008-string-to-integer-atoi/Solution.java) |
 | 009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Math | `Easy` | $O(\log_{10} x)$ | $O(1)$ | [Java](solutions/day-009-palindrome-number/Solution.java) |
 | 010 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | String, Dynamic Programming, Recursion | `Hard` | $O(M \times N)$ | $O(M \times N)$ | [Java](solutions/day-010-regular-expression-matching/Solution.java) |
+| 011 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Array, Two Pointers, Greedy | `Medium` | $O(N)$ | $O(1)$ | [Java](solutions/day-011-container-with-most-water/Solution.java) |
 <!-- TRACKER_TABLE_END -->
