@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-15%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-15%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-16%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-16%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 4 |
-| 🟡 **Medium** | 9 |
+| 🟡 **Medium** | 10 |
 | 🔴 **Hard** | 2 |
-| 🎯 **Total Solved** | 15 / 365 |
+| 🎯 **Total Solved** | 16 / 365 |
 
 ---
 
@@ -39,4 +39,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 013 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Hash Table, Math, String | `Easy` | $O(N)$ | $O(1)$ | [Java](solutions/day-013-roman-to-integer/Solution.java) |
 | 014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | String, Trie | `Easy` | $O(S)$ | $O(1)$ | [Java](solutions/day-014-longest-common-prefix/Solution.java) |
 | 015 | [3Sum](https://leetcode.com/problems/3sum/) | Array, Two Pointers, Sorting | `Medium` | $O(N^2)$ | $O(1)$ | [Java](solutions/day-015-3sum/Solution.java) |
+| 016 | [3Sum Closest](https://leetcode.com/problems/3sum-closest/) | Array, Two Pointers, Sorting | `Medium` | $O(N^2)$ | $O(1)$ | [Java](solutions/day-016-3sum-closest/Solution.java) |
 <!-- TRACKER_TABLE_END -->
