@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-17%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-17%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-18%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-18%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 4 |
-| 🟡 **Medium** | 11 |
+| 🟡 **Medium** | 12 |
 | 🔴 **Hard** | 2 |
-| 🎯 **Total Solved** | 17 / 365 |
+| 🎯 **Total Solved** | 18 / 365 |
 
 ---
 
@@ -41,4 +41,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 015 | [3Sum](https://leetcode.com/problems/3sum/) | Array, Two Pointers, Sorting | `Medium` | $O(N^2)$ | $O(1)$ | [Java](solutions/day-015-3sum/Solution.java) |
 | 016 | [3Sum Closest](https://leetcode.com/problems/3sum-closest/) | Array, Two Pointers, Sorting | `Medium` | $O(N^2)$ | $O(1)$ | [Java](solutions/day-016-3sum-closest/Solution.java) |
 | 017 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Hash Table, String, Backtracking | `Medium` | $O(4^N \times N)$ | $O(N)$ | [Java](solutions/day-017-letter-combinations-of-a-phone-number/Solution.java) |
+| 018 | [4Sum](https://leetcode.com/problems/4sum/) | Array, Two Pointers, Sorting | `Medium` | $O(N^3)$ | $O(1)$ | [Java](solutions/day-018-4sum/Solution.java) |
 <!-- TRACKER_TABLE_END -->
