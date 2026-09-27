@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-21%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-21%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-22%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-22%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 6 |
-| 🟡 **Medium** | 13 |
+| 🟡 **Medium** | 14 |
 | 🔴 **Hard** | 2 |
-| 🎯 **Total Solved** | 21 / 365 |
+| 🎯 **Total Solved** | 22 / 365 |
 
 ---
 
@@ -45,4 +45,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 019 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Linked List, Two Pointers | `Medium` | $O(L)$ | $O(1)$ | [Java](solutions/day-019-remove-nth-node-from-end-of-list/Solution.java) |
 | 020 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | String, Stack | `Easy` | $O(N)$ | $O(N)$ | [Java](solutions/day-020-valid-parentheses/Solution.java) |
 | 021 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List, Recursion | `Easy` | $O(M + N)$ | $O(1)$ | [Java](solutions/day-021-merge-two-sorted-lists/Solution.java) |
+| 022 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | String, Dynamic Programming, Backtracking | `Medium` | $O\left(\frac{4^n}{\sqrt{n}}\right)$ | $O(n)$ | [Java](solutions/day-022-generate-parentheses/Solution.java) |
 <!-- TRACKER_TABLE_END -->
