@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-24%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-24%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-25%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-25%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -15,8 +15,8 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | :--- | :--- |
 | 🟢 **Easy** | 6 |
 | 🟡 **Medium** | 15 |
-| 🔴 **Hard** | 3 |
-| 🎯 **Total Solved** | 24 / 365 |
+| 🔴 **Hard** | 4 |
+| 🎯 **Total Solved** | 25 / 365 |
 
 ---
 
@@ -48,4 +48,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 022 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | String, Dynamic Programming, Backtracking | `Medium` | $O\left(\frac{4^n}{\sqrt{n}}\right)$ | $O(n)$ | [Java](solutions/day-022-generate-parentheses/Solution.java) |
 | 023 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Linked List, Divide and Conquer, Merge Sort | `Hard` | $O(N \log k)$ | $O(1)$ | [Java](solutions/day-023-merge-k-sorted-lists/Solution.java) |
 | 024 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Linked List, Recursion | `Medium` | $O(N)$ | $O(1)$ | [Java](solutions/day-024-swap-nodes-in-pairs/Solution.java) |
+| 025 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Linked List, Recursion | `Hard` | $O(N)$ | $O(1)$ | [Java](solutions/day-025-reverse-nodes-in-k-group/Solution.java) |
 <!-- TRACKER_TABLE_END -->
