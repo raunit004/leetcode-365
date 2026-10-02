@@ -1,0 +1,43 @@
+name: Daily LeetCode Auto Release
+
+on:
+  schedule:
+    # 00:30 UTC = 06:00 AM IST everyday
+    - cron: '30 0 * * *'
+  workflow_dispatch: # Allows manual run anytime from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Process Queued Solution
+        run: |
+          python scripts/release_next.py
+
+      - name: Commit and Push
+        run: |
+          if [ -f .commit_msg ]; then
+            COMMIT_MSG=$(cat .commit_msg)
+            rm .commit_msg
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add solutions/ README.md queue/
+            git commit -m "$COMMIT_MSG"
+            git push origin main
+            echo "Successfully released next day."
+          else
+            echo "Queue is empty. No release needed."
+          fi
