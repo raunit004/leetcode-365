@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-27%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-27%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-28%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-28%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 8 |
+| 🟢 **Easy** | 9 |
 | 🟡 **Medium** | 15 |
 | 🔴 **Hard** | 4 |
-| 🎯 **Total Solved** | 27 / 365 |
+| 🎯 **Total Solved** | 28 / 365 |
 
 ---
 
@@ -51,4 +51,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 025 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Linked List, Recursion | `Hard` | $O(N)$ | $O(1)$ | [Java](solutions/day-025-reverse-nodes-in-k-group/Solution.java) |
 | 026 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Array, Two Pointers | `Easy` | $O(N)$ | $O(1)$ | [Java](solutions/day-026-remove-duplicates-from-sorted-array/Solution.java) |
 | 027 | [Remove Element](https://leetcode.com/problems/remove-element/) | Array, Two Pointers | `Easy` | $O(N)$ | $O(1)$ | [Java](solutions/day-027-remove-element/Solution.java) |
+| 028 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Two Pointers, String, String Matching | `Easy` | $O((n - m + 1) \times m)$ | $O(1)$ | [Java](solutions/day-028-find-the-index-of-the-first-occurrence-in-a-string/Solution.java) |
 <!-- TRACKER_TABLE_END -->
