@@ -3,7 +3,7 @@ name: Daily LeetCode Auto Release
 on:
   schedule:
     # 00:30 UTC = 06:00 AM IST everyday
-    - cron: '30 0 * * *'
+    - cron: '18 0 * * *'
   workflow_dispatch: # Allows manual run anytime from GitHub Actions tab
 
 permissions:
