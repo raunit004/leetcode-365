@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-29%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-29%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-30%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-30%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -15,8 +15,8 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | :--- | :--- |
 | 🟢 **Easy** | 9 |
 | 🟡 **Medium** | 16 |
-| 🔴 **Hard** | 4 |
-| 🎯 **Total Solved** | 29 / 365 |
+| 🔴 **Hard** | 5 |
+| 🎯 **Total Solved** | 30 / 365 |
 
 ---
 
@@ -53,4 +53,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 027 | [Remove Element](https://leetcode.com/problems/remove-element/) | Array, Two Pointers | `Easy` | $O(N)$ | $O(1)$ | [Java](solutions/day-027-remove-element/Solution.java) |
 | 028 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Two Pointers, String, String Matching | `Easy` | $O((n - m + 1) \times m)$ | $O(1)$ | [Java](solutions/day-028-find-the-index-of-the-first-occurrence-in-a-string/Solution.java) |
 | 029 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | Math, Bit Manipulation | `Medium` | $O(\log^2 N)$ | $O(1)$ | [Java](solutions/day-029-divide-two-integers/Solution.java) |
+| 030 | [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | Hash Table, String, Sliding Window[cite: 8] | `Hard` | $O(N \times L)$ | $O(M \times L)$ | [Java](solutions/day-030-substring-with-concatenation-of-all-words/Solution.java) |
 <!-- TRACKER_TABLE_END -->
