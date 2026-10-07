@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-31%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-31%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-32%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-32%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -15,8 +15,8 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | :--- | :--- |
 | 🟢 **Easy** | 9 |
 | 🟡 **Medium** | 17 |
-| 🔴 **Hard** | 5 |
-| 🎯 **Total Solved** | 31 / 365 |
+| 🔴 **Hard** | 6 |
+| 🎯 **Total Solved** | 32 / 365 |
 
 ---
 
@@ -55,4 +55,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 029 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | Math, Bit Manipulation | `Medium` | $O(\log^2 N)$ | $O(1)$ | [Java](solutions/day-029-divide-two-integers/Solution.java) |
 | 030 | [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | Hash Table, String, Sliding Window[cite: 8] | `Hard` | $O(N \times L)$ | $O(M \times L)$ | [Java](solutions/day-030-substring-with-concatenation-of-all-words/Solution.java) |
 | 031 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Array, Two Pointers | `Medium` | $O(N)$ | $O(1)$ | [Java](solutions/day-031-next-permutation/Solution.java) |
+| 032 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | String, Dynamic Programming, Stack | `Hard` | $O(N)$ | $O(N)$ | [Java](solutions/day-032-longest-valid-parentheses/Solution.java) |
 <!-- TRACKER_TABLE_END -->
