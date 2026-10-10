@@ -1,110 +1,227 @@
 import os
 import re
 import shutil
-from pathlib import Path
+import sys
 
-# Paths
-ROOT_DIR = Path(__file__).resolve().parent.parent
-QUEUE_DIR = ROOT_DIR / "queue"
-SOLUTIONS_DIR = ROOT_DIR / "solutions"
-README_FILE = ROOT_DIR / "README.md"
-COMMIT_MSG_FILE = ROOT_DIR / ".commit_msg"
+QUEUE_DIR = "queue"
+SOLUTIONS_DIR = "solutions"
+ROOT_README = "README.md"
 
-def get_next_queued_folder():
-    """Finds the lowest numbered day waiting in queue/."""
-    if not QUEUE_DIR.exists():
-        return None
-    folders = [f for f in QUEUE_DIR.iterdir() if f.is_dir() and re.match(r"^day-\d+", f.name)]
-    if not folders:
-        return None
-    # Sort folders by integer day number (e.g., day-028 comes before day-029)
-    folders.sort(key=lambda x: int(re.search(r"^day-(\d+)", x.name).group(1)))
-    return folders[0]
+LANG_MAP = {
+    ".java": "Java",
+    ".sql": "SQL",
+    ".py": "Python",
+    ".cpp": "C++",
+    ".js": "JavaScript",
+    ".ts": "TypeScript",
+}
 
-def parse_daily_readme(readme_path):
-    """Extracts problem metadata from the daily solution README.md."""
-    content = readme_path.read_text(encoding="utf-8")
+def detect_solution_file(folder_path):
+    """
+    Finds the primary solution file in the day folder.
+    Prioritizes files named Solution.* (PascalCase) or solution.*,
+    and returns (filename, language_display_name).
+    """
+    files = os.listdir(folder_path)
+    
+    # 1. Search for Solution.* or solution.*
+    for fname in files:
+        base, ext = os.path.splitext(fname)
+        if base.lower() == "solution" and ext.lower() in LANG_MAP:
+            return fname, LANG_MAP[ext.lower()]
+            
+    # 2. Fallback to any recognized code file in the folder
+    for fname in files:
+        _, ext = os.path.splitext(fname)
+        if ext.lower() in LANG_MAP:
+            return fname, LANG_MAP[ext.lower()]
 
-    title_match = re.search(r"^# Day (\d+):\s*(.+)$", content, re.MULTILINE)
-    day_num = title_match.group(1) if title_match else "000"
-    title = title_match.group(2).strip() if title_match else "Unknown"
+    return "Solution.java", "Java"
 
-    diff_match = re.search(r"-\s*\*\*Difficulty:\*\*\s*(Easy|Medium|Hard)", content)
-    difficulty = diff_match.group(1) if diff_match else "Medium"
-
-    topic_match = re.search(r"-\s*\*\*Topic:\*\*\s*(.+)$", content, re.MULTILINE)
-    topic = topic_match.group(1).strip() if topic_match else "Algorithm"
-
-    url_match = re.search(r"-\s*\*\*Problem Link:\*\*\s*\[.*?\]\((https://leetcode\.com/problems/[^\s\)]+)\)", content)
-    url = url_match.group(1) if url_match else "https://leetcode.com/"
-
-    time_match = re.search(r"-\s*\*\*Time Complexity:\*\*\s*(\$[^\$]+\$)", content)
-    time_comp = time_match.group(1) if time_match else "$O(N)$"
-
-    space_match = re.search(r"-\s*\*\*Space Complexity:\*\*\s*(\$[^\$]+\$)", content)
-    space_comp = space_match.group(1) if space_match else "$O(1)$"
-
-    return {
-        "day": day_num,
-        "title": title,
-        "difficulty": difficulty,
-        "topic": topic,
-        "url": url,
-        "time": time_comp,
-        "space": space_comp
+def parse_day_readme(readme_path):
+    """
+    Extracts metadata from a solution folder's README.md.
+    """
+    meta = {
+        "title": "Problem Solution",
+        "difficulty": "Easy",
+        "topic": "Algorithms",
+        "url": "#",
+        "time_comp": "O(N)",
+        "space_comp": "O(1)",
     }
+    
+    if not os.path.exists(readme_path):
+        return meta
 
-def update_root_readme(meta, folder_name):
-    """Updates badges, counts, and appends a row to the main tracker table."""
-    content = README_FILE.read_text(encoding="utf-8")
-    day_int = int(meta["day"])
+    with open(readme_path, "r", encoding="utf-8") as f:
+        content = f.read()
 
-    # 1. Update streak and completed badges
-    content = re.sub(r"Days%20Completed-\d+%2F365", f"Days%20Completed-{day_int}%2F365", content)
-    content = re.sub(r"Current%20Streak-\d+%20Days", f"Current%20Streak-{day_int}%20Days", content)
+    # Title: # Day 034: Problem Title
+    m_title = re.search(r"^#\s+Day\s+\d+:\s*(.+)$", content, re.MULTILINE)
+    if m_title:
+        meta["title"] = m_title.group(1).strip()
 
-    # 2. Update category counts
-    diff = meta["difficulty"]
-    if diff == "Easy":
-        content = re.sub(r"(\|\s*🟢\s*\*\*Easy\*\*\s*\|\s*)(\d+)(\s*\|)", lambda m: f"{m.group(1)}{int(m.group(2)) + 1}{m.group(3)}", content)
-    elif diff == "Medium":
-        content = re.sub(r"(\|\s*🟡\s*\*\*Medium\*\*\s*\|\s*)(\d+)(\s*\|)", lambda m: f"{m.group(1)}{int(m.group(2)) + 1}{m.group(3)}", content)
-    elif diff == "Hard":
-        content = re.sub(r"(\|\s*🔴\s*\*\*Hard\*\*\s*\|\s*)(\d+)(\s*\|)", lambda m: f"{m.group(1)}{int(m.group(2)) + 1}{m.group(3)}", content)
+    # Difficulty
+    m_diff = re.search(r"-\s+\*\*Difficulty:\*\*\s*(.+)$", content, re.MULTILINE)
+    if m_diff:
+        meta["difficulty"] = m_diff.group(1).strip()
 
-    content = re.sub(r"(\|\s*🎯\s*\*\*Total Solved\*\*\s*\|\s*)\d+\s*/\s*365", f"\\g<1>{day_int} / 365", content)
+    # Topic
+    m_topic = re.search(r"-\s+\*\*Topic:\*\*\s*(.+)$", content, re.MULTILINE)
+    if m_topic:
+        meta["topic"] = m_topic.group(1).strip()
 
-    # 3. Append the new row to the tracker table
-    new_row = (
-        f"| {meta['day']} | [{meta['title']}]({meta['url']}) | {meta['topic']} | "
-        f"`{meta['difficulty']}` | {meta['time']} | {meta['space']} | "
-        f"[Java](solutions/{folder_name}/Solution.java) |\n"
-    )
+    # Problem Link
+    m_link = re.search(r"-\s+\*\*Problem Link:\*\*\s*\[.*?\]\((.+?)\)", content, re.MULTILINE)
+    if m_link:
+        meta["url"] = m_link.group(1).strip()
 
-    if "<!-- TRACKER_TABLE_END -->" in content:
-        content = content.replace("<!-- TRACKER_TABLE_END -->", f"{new_row}<!-- TRACKER_TABLE_END -->")
-    else:
-        content += new_row
+    # Time Complexity
+    m_time = re.search(r"-\s+\*\*Time Complexity:\*\*\s*(.+)$", content, re.MULTILINE)
+    if m_time:
+        meta["time_comp"] = m_time.group(1).strip()
 
-    README_FILE.write_text(content, encoding="utf-8")
+    # Space Complexity
+    m_space = re.search(r"-\s+\*\*Space Complexity:\*\*\s*(.+)$", content, re.MULTILINE)
+    if m_space:
+        meta["space_comp"] = m_space.group(1).strip()
 
-def main():
-    target_folder = get_next_queued_folder()
-    if not target_folder:
-        print("NO_QUEUE: Nothing to release.")
+    return meta
+
+def update_root_readme(new_day_folder, new_day_num, meta, sol_file, lang_label):
+    """
+    Recalculates counts, updates badges, and adds the new solution row
+    to the master tracker table in the root README.md.
+    """
+    if not os.path.exists(ROOT_README):
+        print(f"Warning: {ROOT_README} not found.")
         return
 
-    dest_folder = SOLUTIONS_DIR / target_folder.name
-    SOLUTIONS_DIR.mkdir(exist_ok=True)
-    shutil.move(str(target_folder), str(dest_folder))
+    with open(ROOT_README, "r", encoding="utf-8") as f:
+        readme_text = f.read()
 
-    meta = parse_daily_readme(dest_folder / "README.md")
-    update_root_readme(meta, target_folder.name)
+    # Calculate exact counts across all folders in solutions/
+    all_solutions = [
+        d for d in os.listdir(SOLUTIONS_DIR)
+        if os.path.isdir(os.path.join(SOLUTIONS_DIR, d)) and re.match(r"^day-\d+", d)
+    ]
+    total_solved = len(all_solutions)
 
-    # Generate standard commit message
-    commit_msg = f"feat: day {meta['day']} - {meta['title'].lower()} [{meta['difficulty']}]"
-    COMMIT_MSG_FILE.write_text(commit_msg, encoding="utf-8")
-    print(f"RELEASED: {commit_msg}")
+    easy_count = 0
+    medium_count = 0
+    hard_count = 0
+
+    for d in all_solutions:
+        sub_readme = os.path.join(SOLUTIONS_DIR, d, "README.md")
+        if os.path.exists(sub_readme):
+            with open(sub_readme, "r", encoding="utf-8") as rf:
+                txt = rf.read()
+                if re.search(r"Difficulty:\*\*\s*Easy", txt, re.IGNORECASE):
+                    easy_count += 1
+                    continue
+                if re.search(r"Difficulty:\*\*\s*Medium", txt, re.IGNORECASE):
+                    medium_count += 1
+                    continue
+                if re.search(r"Difficulty:\*\*\s*Hard", txt, re.IGNORECASE):
+                    hard_count += 1
+                    continue
+
+    # 1. Update Badges
+    readme_text = re.sub(
+        r"Days%20Completed-\d+%2F365-blue",
+        f"Days%20Completed-{total_solved}%2F365-blue",
+        readme_text
+    )
+    readme_text = re.sub(
+        r"Current%20Streak-\d+%20Days-brightgreen",
+        f"Current%20Streak-{total_solved}%20Days-brightgreen",
+        readme_text
+    )
+
+    # 2. Update Overview Counts
+    readme_text = re.sub(
+        r"(\|\s*🟢\s*\*\*Easy\*\*\s*\|\s*)\d+(\s*\|)",
+        rf"\g<1>{easy_count}\g<2>",
+        readme_text
+    )
+    readme_text = re.sub(
+        r"(\|\s*🟡\s*\*\*Medium\*\*\s*\|\s*)\d+(\s*\|)",
+        rf"\g<1>{medium_count}\g<2>",
+        readme_text
+    )
+    readme_text = re.sub(
+        r"(\|\s*🔴\s*\*\*Hard\*\*\s*\|\s*)\d+(\s*\|)",
+        rf"\g<1>{hard_count}\g<2>",
+        readme_text
+    )
+    readme_text = re.sub(
+        r"(\|\s*🎯\s*\*\*Total Solved\*\*\s*\|\s*)\d+\s*/\s*365(\s*\|)",
+        rf"\g<1>{total_solved} / 365\g<2>",
+        readme_text
+    )
+
+    # 3. Construct Table Row with correct relative link and language label
+    day_str = f"{new_day_num:03d}"
+    sol_rel_path = f"solutions/{new_day_folder}/{sol_file}"
+    new_row = (
+        f"| {day_str} | [{meta['title']}]({meta['url']}) | {meta['topic']} | "
+        f"`{meta['difficulty']}` | {meta['time_comp']} | {meta['space_comp']} | "
+        f"[{lang_label}]({sol_rel_path}) |"
+    )
+
+    # 4. Insert before <!-- TRACKER_TABLE_END --> if not already added
+    if day_str not in readme_text:
+        if "<!-- TRACKER_TABLE_END -->" in readme_text:
+            readme_text = readme_text.replace(
+                "<!-- TRACKER_TABLE_END -->",
+                f"{new_row}\n<!-- TRACKER_TABLE_END -->"
+            )
+        else:
+            readme_text += f"\n{new_row}\n"
+
+    with open(ROOT_README, "w", encoding="utf-8") as f:
+        f.write(readme_text)
+
+def main():
+    if not os.path.exists(QUEUE_DIR):
+        print("Queue directory does not exist. Nothing to release.")
+        sys.exit(0)
+
+    # Find candidate day folders inside queue/
+    queue_entries = [
+        d for d in os.listdir(QUEUE_DIR)
+        if os.path.isdir(os.path.join(QUEUE_DIR, d)) and re.match(r"^day-(\d+)", d)
+    ]
+
+    if not queue_entries:
+        print("Queue is empty. No release needed.")
+        sys.exit(0)
+
+    # Sort to pick the lowest numbered day
+    queue_entries.sort(key=lambda d: int(re.match(r"^day-(\d+)", d).group(1)))
+    next_day_folder = queue_entries[0]
+    day_num = int(re.match(r"^day-(\d+)", next_day_folder).group(1))
+
+    src_path = os.path.join(QUEUE_DIR, next_day_folder)
+    os.makedirs(SOLUTIONS_DIR, exist_ok=True)
+    dst_path = os.path.join(SOLUTIONS_DIR, next_day_folder)
+
+    if os.path.exists(dst_path):
+        print(f"Destination {dst_path} already exists. Removing older duplicate.")
+        shutil.rmtree(dst_path)
+
+    print(f"Releasing {next_day_folder} from queue to solutions...")
+    shutil.move(src_path, dst_path)
+
+    # Detect solution file and parse metadata
+    sol_file, lang_label = detect_solution_file(dst_path)
+    day_readme = os.path.join(dst_path, "README.md")
+    meta = parse_day_readme(day_readme)
+
+    # Update root README.md
+    update_root_readme(next_day_folder, day_num, meta, sol_file, lang_label)
+    print(f"Successfully released Day {day_num:03d} ({lang_label})!")
 
 if __name__ == "__main__":
     main()
