@@ -56,6 +56,6 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 030 | [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | Hash Table, String, Sliding Window[cite: 8] | `Hard` | $O(N \times L)$ | $O(M \times L)$ | [Java](solutions/day-030-substring-with-concatenation-of-all-words/Solution.java) |
 | 031 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Array, Two Pointers | `Medium` | $O(N)$ | $O(1)$ | [Java](solutions/day-031-next-permutation/Solution.java) |
 | 032 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | String, Dynamic Programming, Stack | `Hard` | $O(N)$ | $O(N)$ | [Java](solutions/day-032-longest-valid-parentheses/Solution.java) |
-| 033 | [Combine Two Tables](https://leetcode.com/problems/combine-two-tables/) | Database | `Easy` | $O(N + M)$ | $O(1)$ | [Java](solutions/day-033-combine-two-tables/Solution.java) |
-| 034 | [Duplicate Emails](https://leetcode.com/problems/duplicate-emails/) | Database[cite: 13] | `Easy` | $O(N)$ | $O(N)$ | [Java](solutions/day-034-duplicate-emails/Solution.java) |
+| 033 | [Combine Two Tables](https://leetcode.com/problems/combine-two-tables/) | Database | `Easy` | $O(N + M)$ | $O(1)$ | [Java](solutions/day-033-combine-two-tables/Solution.sql) |
+| 034 | [Duplicate Emails](https://leetcode.com/problems/duplicate-emails/) | Database[cite: 13] | `Easy` | $O(N)$ | $O(N)$ | [Java](solutions/day-034-duplicate-emails/Solution.sql) |
 <!-- TRACKER_TABLE_END -->
