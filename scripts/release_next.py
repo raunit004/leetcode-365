@@ -6,6 +6,7 @@ import sys
 QUEUE_DIR = "queue"
 SOLUTIONS_DIR = "solutions"
 ROOT_README = "README.md"
+COMMIT_FILE = ".commit_msg"
 
 LANG_MAP = {
     ".java": "Java",
@@ -18,19 +19,16 @@ LANG_MAP = {
 
 def detect_solution_file(folder_path):
     """
-    Finds the primary solution file in the day folder.
-    Prioritizes files named Solution.* (PascalCase) or solution.*,
-    and returns (filename, language_display_name).
+    Finds the primary solution file in the target day folder.
+    Prioritizes files matching Solution.* (PascalCase) or solution.*.
     """
     files = os.listdir(folder_path)
     
-    # 1. Search for Solution.* or solution.*
     for fname in files:
         base, ext = os.path.splitext(fname)
         if base.lower() == "solution" and ext.lower() in LANG_MAP:
             return fname, LANG_MAP[ext.lower()]
             
-    # 2. Fallback to any recognized code file in the folder
     for fname in files:
         _, ext = os.path.splitext(fname)
         if ext.lower() in LANG_MAP:
@@ -40,7 +38,7 @@ def detect_solution_file(folder_path):
 
 def parse_day_readme(readme_path):
     """
-    Extracts metadata from a solution folder's README.md.
+    Extracts metadata from the problem folder's README.md.
     """
     meta = {
         "title": "Problem Solution",
@@ -57,32 +55,26 @@ def parse_day_readme(readme_path):
     with open(readme_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Title: # Day 034: Problem Title
     m_title = re.search(r"^#\s+Day\s+\d+:\s*(.+)$", content, re.MULTILINE)
     if m_title:
         meta["title"] = m_title.group(1).strip()
 
-    # Difficulty
     m_diff = re.search(r"-\s+\*\*Difficulty:\*\*\s*(.+)$", content, re.MULTILINE)
     if m_diff:
         meta["difficulty"] = m_diff.group(1).strip()
 
-    # Topic
     m_topic = re.search(r"-\s+\*\*Topic:\*\*\s*(.+)$", content, re.MULTILINE)
     if m_topic:
         meta["topic"] = m_topic.group(1).strip()
 
-    # Problem Link
     m_link = re.search(r"-\s+\*\*Problem Link:\*\*\s*\[.*?\]\((.+?)\)", content, re.MULTILINE)
     if m_link:
         meta["url"] = m_link.group(1).strip()
 
-    # Time Complexity
     m_time = re.search(r"-\s+\*\*Time Complexity:\*\*\s*(.+)$", content, re.MULTILINE)
     if m_time:
         meta["time_comp"] = m_time.group(1).strip()
 
-    # Space Complexity
     m_space = re.search(r"-\s+\*\*Space Complexity:\*\*\s*(.+)$", content, re.MULTILINE)
     if m_space:
         meta["space_comp"] = m_space.group(1).strip()
@@ -90,10 +82,6 @@ def parse_day_readme(readme_path):
     return meta
 
 def update_root_readme(new_day_folder, new_day_num, meta, sol_file, lang_label):
-    """
-    Recalculates counts, updates badges, and adds the new solution row
-    to the master tracker table in the root README.md.
-    """
     if not os.path.exists(ROOT_README):
         print(f"Warning: {ROOT_README} not found.")
         return
@@ -101,7 +89,7 @@ def update_root_readme(new_day_folder, new_day_num, meta, sol_file, lang_label):
     with open(ROOT_README, "r", encoding="utf-8") as f:
         readme_text = f.read()
 
-    # Calculate exact counts across all folders in solutions/
+    # Tally problem counts across all solutions directories
     all_solutions = [
         d for d in os.listdir(SOLUTIONS_DIR)
         if os.path.isdir(os.path.join(SOLUTIONS_DIR, d)) and re.match(r"^day-\d+", d)
@@ -119,13 +107,10 @@ def update_root_readme(new_day_folder, new_day_num, meta, sol_file, lang_label):
                 txt = rf.read()
                 if re.search(r"Difficulty:\*\*\s*Easy", txt, re.IGNORECASE):
                     easy_count += 1
-                    continue
-                if re.search(r"Difficulty:\*\*\s*Medium", txt, re.IGNORECASE):
+                elif re.search(r"Difficulty:\*\*\s*Medium", txt, re.IGNORECASE):
                     medium_count += 1
-                    continue
-                if re.search(r"Difficulty:\*\*\s*Hard", txt, re.IGNORECASE):
+                elif re.search(r"Difficulty:\*\*\s*Hard", txt, re.IGNORECASE):
                     hard_count += 1
-                    continue
 
     # 1. Update Badges
     readme_text = re.sub(
@@ -139,7 +124,7 @@ def update_root_readme(new_day_folder, new_day_num, meta, sol_file, lang_label):
         readme_text
     )
 
-    # 2. Update Overview Counts
+    # 2. Update Difficulty Breakdown
     readme_text = re.sub(
         r"(\|\s*🟢\s*\*\*Easy\*\*\s*\|\s*)\d+(\s*\|)",
         rf"\g<1>{easy_count}\g<2>",
@@ -161,7 +146,7 @@ def update_root_readme(new_day_folder, new_day_num, meta, sol_file, lang_label):
         readme_text
     )
 
-    # 3. Construct Table Row with correct relative link and language label
+    # 3. Format Master Tracker Table Row
     day_str = f"{new_day_num:03d}"
     sol_rel_path = f"solutions/{new_day_folder}/{sol_file}"
     new_row = (
@@ -170,15 +155,16 @@ def update_root_readme(new_day_folder, new_day_num, meta, sol_file, lang_label):
         f"[{lang_label}]({sol_rel_path}) |"
     )
 
-    # 4. Insert before <!-- TRACKER_TABLE_END --> if not already added
-    if day_str not in readme_text:
+    # Check specifically for table cell "| 035 |" rather than broad substring
+    table_cell_pattern = rf"\|\s*{day_str}\s*\|"
+    if not re.search(table_cell_pattern, readme_text):
         if "<!-- TRACKER_TABLE_END -->" in readme_text:
             readme_text = readme_text.replace(
                 "<!-- TRACKER_TABLE_END -->",
                 f"{new_row}\n<!-- TRACKER_TABLE_END -->"
             )
         else:
-            readme_text += f"\n{new_row}\n"
+            readme_text = readme_text.rstrip() + f"\n{new_row}\n"
 
     with open(ROOT_README, "w", encoding="utf-8") as f:
         f.write(readme_text)
@@ -188,7 +174,6 @@ def main():
         print("Queue directory does not exist. Nothing to release.")
         sys.exit(0)
 
-    # Find candidate day folders inside queue/
     queue_entries = [
         d for d in os.listdir(QUEUE_DIR)
         if os.path.isdir(os.path.join(QUEUE_DIR, d)) and re.match(r"^day-(\d+)", d)
@@ -198,7 +183,7 @@ def main():
         print("Queue is empty. No release needed.")
         sys.exit(0)
 
-    # Sort to pick the lowest numbered day
+    # Release lowest-numbered queued day
     queue_entries.sort(key=lambda d: int(re.match(r"^day-(\d+)", d).group(1)))
     next_day_folder = queue_entries[0]
     day_num = int(re.match(r"^day-(\d+)", next_day_folder).group(1))
@@ -208,20 +193,25 @@ def main():
     dst_path = os.path.join(SOLUTIONS_DIR, next_day_folder)
 
     if os.path.exists(dst_path):
-        print(f"Destination {dst_path} already exists. Removing older duplicate.")
+        print(f"Destination {dst_path} already exists. Replacing with queued version.")
         shutil.rmtree(dst_path)
 
     print(f"Releasing {next_day_folder} from queue to solutions...")
     shutil.move(src_path, dst_path)
 
-    # Detect solution file and parse metadata
     sol_file, lang_label = detect_solution_file(dst_path)
     day_readme = os.path.join(dst_path, "README.md")
     meta = parse_day_readme(day_readme)
 
     # Update root README.md
     update_root_readme(next_day_folder, day_num, meta, sol_file, lang_label)
-    print(f"Successfully released Day {day_num:03d} ({lang_label})!")
+
+    # Create .commit_msg so GitHub Actions executes git commit & push
+    commit_msg = f"feat: day {day_num:03d} - {meta['title'].lower()} [{meta['difficulty']}]"
+    with open(COMMIT_FILE, "w", encoding="utf-8") as cf:
+        cf.write(commit_msg)
+
+    print(f"Successfully released Day {day_num:03d} ({lang_label}) and created {COMMIT_FILE}!")
 
 if __name__ == "__main__":
     main()
