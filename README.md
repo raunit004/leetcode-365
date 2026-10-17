@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-40%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-40%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-41%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-41%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 14 |
-| 🟡 **Medium** | 20 |
+| 🟡 **Medium** | 21 |
 | 🔴 **Hard** | 6 |
-| 🎯 **Total Solved** | 40 / 365 |
+| 🎯 **Total Solved** | 41 / 365 |
 
 ---
 
@@ -64,4 +64,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 038 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Array, Binary Search[cite: 8] | `Medium[cite: 8]` | $O(\log N)$[cite: 8] | $O(1)$ | [Java](solutions/day-038-search-in-rotated-sorted-array/Solution.java) |
 | 039 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Array, Binary Search | `Medium[cite: 9]` | $O(\log N)$[cite: 9] | $O(1)$ | [Java](solutions/day-039-find-first-and-last-position-of-element-in-sorted-array/Solution.java) |
 | 040 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Array, Binary Search | `Easy[cite: 10]` | $O(\log N)$[cite: 10] | $O(1)$ | [Java](solutions/day-040-search-insert-position/Solution.java) |
+| 041 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Array, Hash Table, Matrix[cite: 11] | `Medium[cite: 11]` | $O(1)$ (fixed $9 \times 9$ board) | $O(1)$ auxiliary space | [Java](solutions/day-041-valid-sudoku/Solution.java) |
 <!-- TRACKER_TABLE_END -->
