@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-42%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-42%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-43%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-43%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 14 |
-| 🟡 **Medium** | 21 |
+| 🟡 **Medium** | 22 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 42 / 365 |
+| 🎯 **Total Solved** | 43 / 365 |
 
 ---
 
@@ -66,4 +66,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 040 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Array, Binary Search | `Easy[cite: 10]` | $O(\log N)$[cite: 10] | $O(1)$ | [Java](solutions/day-040-search-insert-position/Solution.java) |
 | 041 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Array, Hash Table, Matrix[cite: 11] | `Medium[cite: 11]` | $O(1)$ (fixed $9 \times 9$ board) | $O(1)$ auxiliary space | [Java](solutions/day-041-valid-sudoku/Solution.java) |
 | 042 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Array, Hash Table, Backtracking, Matrix | `Hard[cite: 12]` | $O(9^M)$ where $M \le 81$ is the number of empty cells ($O(1)$ for fixed $9 \times 9$) | $O(M)$ auxiliary recursion depth and index list | [Java](solutions/day-042-sudoku-solver/Solution.java) |
+| 043 | [Count and Say](https://leetcode.com/problems/count-and-say/) | String, Two Pointers | `Medium[cite: 12]` | $O(L)$ where $L$ is the cumulative length of all generated sequences up to $n$ | $O(M)$ auxiliary space where $M$ is the length of the $n$-th string | [Java](solutions/day-043-count-and-say/Solution.java) |
 <!-- TRACKER_TABLE_END -->
