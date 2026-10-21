@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-44%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-44%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-45%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-45%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 14 |
-| 🟡 **Medium** | 23 |
+| 🟡 **Medium** | 24 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 44 / 365 |
+| 🎯 **Total Solved** | 45 / 365 |
 
 ---
 
@@ -68,4 +68,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 042 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Array, Hash Table, Backtracking, Matrix | `Hard[cite: 12]` | $O(9^M)$ where $M \le 81$ is the number of empty cells ($O(1)$ for fixed $9 \times 9$) | $O(M)$ auxiliary recursion depth and index list | [Java](solutions/day-042-sudoku-solver/Solution.java) |
 | 043 | [Count and Say](https://leetcode.com/problems/count-and-say/) | String, Two Pointers | `Medium[cite: 12]` | $O(L)$ where $L$ is the cumulative length of all generated sequences up to $n$ | $O(M)$ auxiliary space where $M$ is the length of the $n$-th string | [Java](solutions/day-043-count-and-say/Solution.java) |
 | 044 | [Linked List Components](https://leetcode.com/problems/linked-list-components/) | Linked List, Hash Table[cite: 10] | `Medium[cite: 10]` | $O(N + M)$ | $O(M)$ auxiliary space | [Java](solutions/day-044-linked-list-components/Solution.java) |
+| 045 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Array, Backtracking[cite: 11] | `Medium[cite: 11]` | $O(N \log N + N^{\frac{T}{M}})$ where $N$ is array length, $T$ is target, and $M$ is $\min(\text{candidates})$ | $O(\frac{T}{M})$ auxiliary recursion stack depth | [Java](solutions/day-045-combination-sum/Solution.java) |
 <!-- TRACKER_TABLE_END -->
