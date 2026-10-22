@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-45%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-45%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-46%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-46%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 14 |
+| 🟢 **Easy** | 15 |
 | 🟡 **Medium** | 24 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 45 / 365 |
+| 🎯 **Total Solved** | 46 / 365 |
 
 ---
 
@@ -69,4 +69,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 043 | [Count and Say](https://leetcode.com/problems/count-and-say/) | String, Two Pointers | `Medium[cite: 12]` | $O(L)$ where $L$ is the cumulative length of all generated sequences up to $n$ | $O(M)$ auxiliary space where $M$ is the length of the $n$-th string | [Java](solutions/day-043-count-and-say/Solution.java) |
 | 044 | [Linked List Components](https://leetcode.com/problems/linked-list-components/) | Linked List, Hash Table[cite: 10] | `Medium[cite: 10]` | $O(N + M)$ | $O(M)$ auxiliary space | [Java](solutions/day-044-linked-list-components/Solution.java) |
 | 045 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Array, Backtracking[cite: 11] | `Medium[cite: 11]` | $O(N \log N + N^{\frac{T}{M}})$ where $N$ is array length, $T$ is target, and $M$ is $\min(\text{candidates})$ | $O(\frac{T}{M})$ auxiliary recursion stack depth | [Java](solutions/day-045-combination-sum/Solution.java) |
+| 046 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | String | `Easy[cite: 12]` | $O(N)$ (bounded in practice by trailing spaces plus the final word length)[cite: 12] | $O(1)$ auxiliary space[cite: 12] | [Java](solutions/day-046-length-of-last-word/Solution.java) |
 <!-- TRACKER_TABLE_END -->
