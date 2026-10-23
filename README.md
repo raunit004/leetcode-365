@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-46%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-46%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-47%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-47%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 15 |
+| 🟢 **Easy** | 16 |
 | 🟡 **Medium** | 24 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 46 / 365 |
+| 🎯 **Total Solved** | 47 / 365 |
 
 ---
 
@@ -70,4 +70,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 044 | [Linked List Components](https://leetcode.com/problems/linked-list-components/) | Linked List, Hash Table[cite: 10] | `Medium[cite: 10]` | $O(N + M)$ | $O(M)$ auxiliary space | [Java](solutions/day-044-linked-list-components/Solution.java) |
 | 045 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Array, Backtracking[cite: 11] | `Medium[cite: 11]` | $O(N \log N + N^{\frac{T}{M}})$ where $N$ is array length, $T$ is target, and $M$ is $\min(\text{candidates})$ | $O(\frac{T}{M})$ auxiliary recursion stack depth | [Java](solutions/day-045-combination-sum/Solution.java) |
 | 046 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | String | `Easy[cite: 12]` | $O(N)$ (bounded in practice by trailing spaces plus the final word length)[cite: 12] | $O(1)$ auxiliary space[cite: 12] | [Java](solutions/day-046-length-of-last-word/Solution.java) |
+| 047 | [Plus One](https://leetcode.com/problems/plus-one/) | Array, Math | `Easy[cite: 13]` | $O(N)$ worst-case, $O(1)$ best/average-case[cite: 13] | $O(1)$ auxiliary space ($O(N)$ allocation only on all-9 overflow)[cite: 13] | [Java](solutions/day-047-plus-one/Solution.java) |
 <!-- TRACKER_TABLE_END -->
