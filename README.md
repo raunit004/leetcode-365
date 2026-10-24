@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-47%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-47%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-48%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-48%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 16 |
+| 🟢 **Easy** | 17 |
 | 🟡 **Medium** | 24 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 47 / 365 |
+| 🎯 **Total Solved** | 48 / 365 |
 
 ---
 
@@ -71,4 +71,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 045 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Array, Backtracking[cite: 11] | `Medium[cite: 11]` | $O(N \log N + N^{\frac{T}{M}})$ where $N$ is array length, $T$ is target, and $M$ is $\min(\text{candidates})$ | $O(\frac{T}{M})$ auxiliary recursion stack depth | [Java](solutions/day-045-combination-sum/Solution.java) |
 | 046 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | String | `Easy[cite: 12]` | $O(N)$ (bounded in practice by trailing spaces plus the final word length)[cite: 12] | $O(1)$ auxiliary space[cite: 12] | [Java](solutions/day-046-length-of-last-word/Solution.java) |
 | 047 | [Plus One](https://leetcode.com/problems/plus-one/) | Array, Math | `Easy[cite: 13]` | $O(N)$ worst-case, $O(1)$ best/average-case[cite: 13] | $O(1)$ auxiliary space ($O(N)$ allocation only on all-9 overflow)[cite: 13] | [Java](solutions/day-047-plus-one/Solution.java) |
+| 048 | [Add Binary](https://leetcode.com/problems/add-binary/) | Math, String, Bit Manipulation, Simulation | `Easy[cite: 13]` | $O(\max(N, M))$ where $N$ and $M$ are lengths of strings `a` and `b`[cite: 13] | $O(\max(N, M))$ auxiliary space to construct the result[cite: 13] | [Java](solutions/day-048-add-binary/Solution.java) |
 <!-- TRACKER_TABLE_END -->
