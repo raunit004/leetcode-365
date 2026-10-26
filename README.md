@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-49%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-49%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-50%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-50%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 17 |
-| 🟡 **Medium** | 25 |
+| 🟡 **Medium** | 26 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 49 / 365 |
+| 🎯 **Total Solved** | 50 / 365 |
 
 ---
 
@@ -73,4 +73,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 047 | [Plus One](https://leetcode.com/problems/plus-one/) | Array, Math | `Easy[cite: 13]` | $O(N)$ worst-case, $O(1)$ best/average-case[cite: 13] | $O(1)$ auxiliary space ($O(N)$ allocation only on all-9 overflow)[cite: 13] | [Java](solutions/day-047-plus-one/Solution.java) |
 | 048 | [Add Binary](https://leetcode.com/problems/add-binary/) | Math, String, Bit Manipulation, Simulation | `Easy[cite: 13]` | $O(\max(N, M))$ where $N$ and $M$ are lengths of strings `a` and `b`[cite: 13] | $O(\max(N, M))$ auxiliary space to construct the result[cite: 13] | [Java](solutions/day-048-add-binary/Solution.java) |
 | 049 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Array, Backtracking[cite: 14] | `Medium[cite: 14]` | $O(N \log N + 2^N)$ where $N$ is the number of candidates[cite: 14] | $O(N)$ auxiliary space for recursion stack and candidate combination buffer | [Java](solutions/day-049-combination-sum-ii/Solution.java) |
+| 050 | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | Math, String, Simulation | `Medium[cite: 16]` | $O(M \times N)$ where $M$ and $N$ are the lengths of `num1` and `num2`[cite: 16] | $O(M + N)$ auxiliary space for the position array[cite: 16] | [Java](solutions/day-050-multiply-strings/Solution.java) |
 <!-- TRACKER_TABLE_END -->
