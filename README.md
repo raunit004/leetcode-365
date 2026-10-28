@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-51%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-51%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-52%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-52%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 18 |
+| 🟢 **Easy** | 19 |
 | 🟡 **Medium** | 26 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 51 / 365 |
+| 🎯 **Total Solved** | 52 / 365 |
 
 ---
 
@@ -75,4 +75,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 049 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Array, Backtracking[cite: 14] | `Medium[cite: 14]` | $O(N \log N + 2^N)$ where $N$ is the number of candidates[cite: 14] | $O(N)$ auxiliary space for recursion stack and candidate combination buffer | [Java](solutions/day-049-combination-sum-ii/Solution.java) |
 | 050 | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | Math, String, Simulation | `Medium[cite: 16]` | $O(M \times N)$ where $M$ and $N$ are the lengths of `num1` and `num2`[cite: 16] | $O(M + N)$ auxiliary space for the position array[cite: 16] | [Java](solutions/day-050-multiply-strings/Solution.java) |
 | 051 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Math, Binary Search | `Easy[cite: 17]` | $O(\log x)$ | $O(1)$ auxiliary space | [Java](solutions/day-051-sqrtx/Solution.java) |
+| 052 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Math, Dynamic Programming, Memoization | `Easy[cite: 18]` | $O(N)$[cite: 18] | $O(1)$ auxiliary space[cite: 18] | [Java](solutions/day-052-climbing-stairs/Solution.java) |
 <!-- TRACKER_TABLE_END -->
