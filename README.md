@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-53%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-53%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-54%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-54%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 20 |
+| 🟢 **Easy** | 21 |
 | 🟡 **Medium** | 26 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 53 / 365 |
+| 🎯 **Total Solved** | 54 / 365 |
 
 ---
 
@@ -77,4 +77,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 051 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Math, Binary Search | `Easy[cite: 17]` | $O(\log x)$ | $O(1)$ auxiliary space | [Java](solutions/day-051-sqrtx/Solution.java) |
 | 052 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Math, Dynamic Programming, Memoization | `Easy[cite: 18]` | $O(N)$[cite: 18] | $O(1)$ auxiliary space[cite: 18] | [Java](solutions/day-052-climbing-stairs/Solution.java) |
 | 053 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Linked List | `Easy[cite: 18]` | $O(N)$ | $O(1)$ auxiliary space | [Java](solutions/day-053-remove-duplicates-from-sorted-list/Solution.java) |
+| 054 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Array, Two Pointers, Sorting | `Easy[cite: 18]` | $O(M + N)$[cite: 18] | $O(1)$ auxiliary space | [Java](solutions/day-054-merge-sorted-array/Solution.java) |
 <!-- TRACKER_TABLE_END -->
