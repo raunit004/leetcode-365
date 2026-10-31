@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-54%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-54%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-55%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-55%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 21 |
+| 🟢 **Easy** | 22 |
 | 🟡 **Medium** | 26 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 54 / 365 |
+| 🎯 **Total Solved** | 55 / 365 |
 
 ---
 
@@ -78,4 +78,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 052 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Math, Dynamic Programming, Memoization | `Easy[cite: 18]` | $O(N)$[cite: 18] | $O(1)$ auxiliary space[cite: 18] | [Java](solutions/day-052-climbing-stairs/Solution.java) |
 | 053 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Linked List | `Easy[cite: 18]` | $O(N)$ | $O(1)$ auxiliary space | [Java](solutions/day-053-remove-duplicates-from-sorted-list/Solution.java) |
 | 054 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Array, Two Pointers, Sorting | `Easy[cite: 18]` | $O(M + N)$[cite: 18] | $O(1)$ auxiliary space | [Java](solutions/day-054-merge-sorted-array/Solution.java) |
+| 055 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Tree, Depth-First Search, Binary Tree | `Easy[cite: 19]` | $O(N)$ | $O(H)$ auxiliary recursion stack space, where $H$ is the tree height ($O(N)$ worst-case) | [Java](solutions/day-055-binary-tree-inorder-traversal/Solution.java) |
 <!-- TRACKER_TABLE_END -->
