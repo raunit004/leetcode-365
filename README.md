@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-57%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-57%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-58%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-58%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 22 |
+| 🟢 **Easy** | 23 |
 | 🟡 **Medium** | 28 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 57 / 365 |
+| 🎯 **Total Solved** | 58 / 365 |
 
 ---
 
@@ -81,4 +81,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 055 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Tree, Depth-First Search, Binary Tree | `Easy[cite: 19]` | $O(N)$ | $O(H)$ auxiliary recursion stack space, where $H$ is the tree height ($O(N)$ worst-case) | [Java](solutions/day-055-binary-tree-inorder-traversal/Solution.java) |
 | 056 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Array, Dynamic Programming, Greedy | `Medium[cite: 20]` | $O(N)$ | $O(1)$ auxiliary space | [Java](solutions/day-056-jump-game-ii/Solution.java) |
 | 057 | [Permutations](https://leetcode.com/problems/permutations/) | Array, Backtracking[cite: 21] | `Medium[cite: 21]` | $O(N \cdot N!)$ where $N$ is the length of `nums`[cite: 21] | $O(N)$ auxiliary space for recursion depth and visited tracking[cite: 21] | [Java](solutions/day-057-permutations/Solution.java) |
+| 058 | [Same Tree](https://leetcode.com/problems/same-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | `Easy[cite: 22]` | $O(\min(N, M))$ where $N$ and $M$ are the node counts of trees $p$ and $q$ | $O(\min(H_p, H_q))$ auxiliary recursion stack space ($O(N)$ worst-case for degenerate trees) | [Java](solutions/day-058-same-tree/Solution.java) |
 <!-- TRACKER_TABLE_END -->
