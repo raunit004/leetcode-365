@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-59%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-59%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-60%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-60%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 24 |
-| 🟡 **Medium** | 28 |
+| 🟡 **Medium** | 29 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 59 / 365 |
+| 🎯 **Total Solved** | 60 / 365 |
 
 ---
 
@@ -83,4 +83,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 057 | [Permutations](https://leetcode.com/problems/permutations/) | Array, Backtracking[cite: 21] | `Medium[cite: 21]` | $O(N \cdot N!)$ where $N$ is the length of `nums`[cite: 21] | $O(N)$ auxiliary space for recursion depth and visited tracking[cite: 21] | [Java](solutions/day-057-permutations/Solution.java) |
 | 058 | [Same Tree](https://leetcode.com/problems/same-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | `Easy[cite: 22]` | $O(\min(N, M))$ where $N$ and $M$ are the node counts of trees $p$ and $q$ | $O(\min(H_p, H_q))$ auxiliary recursion stack space ($O(N)$ worst-case for degenerate trees) | [Java](solutions/day-058-same-tree/Solution.java) |
 | 059 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | `Easy[cite: 22]` | $O(N)$ | $O(H)$ auxiliary recursion stack space ($O(N)$ worst-case for degenerate trees) | [Java](solutions/day-059-symmetric-tree/Solution.java) |
+| 060 | [Permutations II](https://leetcode.com/problems/permutations-ii/) | Array, Backtracking[cite: 22] | `Medium[cite: 22]` | $O(N \cdot N!)$ where $N$ is `nums.length`[cite: 22] | $O(N)$ auxiliary space for recursion stack and visited tracking[cite: 22] | [Java](solutions/day-060-permutations-ii/Solution.java) |
 <!-- TRACKER_TABLE_END -->
