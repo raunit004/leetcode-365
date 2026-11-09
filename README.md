@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-63%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-63%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-64%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-64%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 25 |
+| 🟢 **Easy** | 26 |
 | 🟡 **Medium** | 31 |
 | 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 63 / 365 |
+| 🎯 **Total Solved** | 64 / 365 |
 
 ---
 
@@ -87,4 +87,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 061 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Array, Math, Matrix[cite: 22] | `Medium[cite: 22]` | $O(N^2)$ where $N$ is the side length of the matrix[cite: 22] | $O(1)$ auxiliary space (in-place modification)[cite: 22] | [Java](solutions/day-061-rotate-image/Solution.java) |
 | 062 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Array, Hash Table, String, Sorting | `Medium[cite: 22]` | $O(N \cdot K \log K)$ where $N$ is `strs.length` and $K$ is the maximum length of a string in `strs`[cite: 22] | $O(N \cdot K)$ auxiliary space to store strings inside the hash map[cite: 22] | [Java](solutions/day-062-group-anagrams/Solution.java) |
 | 063 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | `Easy[cite: 23]` | $O(N)$ where $N$ is the total number of nodes in the binary tree | $O(H)$ auxiliary space for call stack frames, where $H$ is the height of the tree ($O(N)$ worst-case) | [Java](solutions/day-063-maximum-depth-of-binary-tree/Solution.java) |
+| 064 | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Array, Divide and Conquer, Tree, Binary Search Tree, Binary Tree | `Easy[cite: 23]` | $O(N)$ where $N$ is `nums.length` | $O(\log N)$ auxiliary recursion stack space for a height-balanced tree | [Java](solutions/day-064-convert-sorted-array-to-binary-search-tree/Solution.java) |
 <!-- TRACKER_TABLE_END -->
