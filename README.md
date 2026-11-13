@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-67%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-67%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-68%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-68%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -15,8 +15,8 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | :--- | :--- |
 | 🟢 **Easy** | 29 |
 | 🟡 **Medium** | 31 |
-| 🔴 **Hard** | 7 |
-| 🎯 **Total Solved** | 67 / 365 |
+| 🔴 **Hard** | 8 |
+| 🎯 **Total Solved** | 68 / 365 |
 
 ---
 
@@ -91,4 +91,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 065 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Tree, Depth-First Search, Binary Tree | `Easy[cite: 20]` | $O(N)$ where $N$ is the number of nodes in the binary tree | $O(H)$ auxiliary space for call stack frames, where $H$ is the height of the tree ($O(N)$ worst-case) | [Java](solutions/day-065-balanced-binary-tree/Solution.java) |
 | 066 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | `Easy[cite: 21]` | $O(N)$ where $N$ is the number of nodes in the binary tree | $O(H)$ auxiliary call stack space, where $H$ is the tree height ($O(N)$ worst-case) | [Java](solutions/day-066-minimum-depth-of-binary-tree/Solution.java) |
 | 067 | [Path Sum](https://leetcode.com/problems/path-sum/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | `Easy[cite: 22]` | $O(N)$ where $N$ is the number of nodes in the binary tree | $O(H)$ auxiliary call stack space, where $H$ is the tree height ($O(N)$ worst-case) | [Java](solutions/day-067-path-sum/Solution.java) |
+| 068 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Array, Hash Table | `Hard[cite: 23]` | $O(N)$[cite: 23] | $O(1)$ auxiliary space[cite: 23] | [Java](solutions/day-068-first-missing-positive/Solution.java) |
 <!-- TRACKER_TABLE_END -->
