@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-74%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-74%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-75%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-75%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 29 |
-| 🟡 **Medium** | 35 |
+| 🟡 **Medium** | 36 |
 | 🔴 **Hard** | 10 |
-| 🎯 **Total Solved** | 74 / 365 |
+| 🎯 **Total Solved** | 75 / 365 |
 
 ---
 
@@ -98,4 +98,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 072 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Array, Divide and Conquer, Dynamic Programming | `Medium[cite: 23]` | $O(N)$ where $N$ is `nums.length` | $O(1)$ auxiliary space | [Java](solutions/day-072-maximum-subarray/Solution.java) |
 | 073 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Array, Matrix, Simulation | `Medium[cite: 23]` | $O(M \times N)$ where $M$ is row count and $N$ is column count[cite: 23] | $O(1)$ auxiliary space (excluding the output list)[cite: 23] | [Java](solutions/day-073-spiral-matrix/Solution.java) |
 | 074 | [Jump Game](https://leetcode.com/problems/jump-game/) | Array, Dynamic Programming, Greedy | `Medium[cite: 24]` | $O(N)$ where $N$ is `nums.length`[cite: 24] | $O(1)$ auxiliary space[cite: 24] | [Java](solutions/day-074-jump-game/Solution.java) |
+| 075 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Array, Sorting | `Medium[cite: 20]` | $O(N \log N)$ where $N$ is `intervals.length`[cite: 20] | $O(N)$ for sorting stack overhead and storing output intervals[cite: 20] | [Java](solutions/day-075-merge-intervals/Solution.java) |
 <!-- TRACKER_TABLE_END -->
