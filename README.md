@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-76%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-76%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-77%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-77%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 29 |
-| 🟡 **Medium** | 37 |
+| 🟡 **Medium** | 38 |
 | 🔴 **Hard** | 10 |
-| 🎯 **Total Solved** | 76 / 365 |
+| 🎯 **Total Solved** | 77 / 365 |
 
 ---
 
@@ -100,4 +100,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 074 | [Jump Game](https://leetcode.com/problems/jump-game/) | Array, Dynamic Programming, Greedy | `Medium[cite: 24]` | $O(N)$ where $N$ is `nums.length`[cite: 24] | $O(1)$ auxiliary space[cite: 24] | [Java](solutions/day-074-jump-game/Solution.java) |
 | 075 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Array, Sorting | `Medium[cite: 20]` | $O(N \log N)$ where $N$ is `intervals.length`[cite: 20] | $O(N)$ for sorting stack overhead and storing output intervals[cite: 20] | [Java](solutions/day-075-merge-intervals/Solution.java) |
 | 076 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Array | `Medium[cite: 21]` | $O(N)$ where $N$ is `intervals.length`[cite: 21] | $O(N)$ to build and return the merged array[cite: 21] | [Java](solutions/day-076-insert-interval/Solution.java) |
+| 077 | [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) | Array, Matrix, Simulation[cite: 22] | `Medium[cite: 22]` | $O(n^2)$ to populate all cells in the grid[cite: 22] | $O(1)$ auxiliary space (excluding the allocated $n \times n$ output matrix)[cite: 22] | [Java](solutions/day-077-spiral-matrix-ii/Solution.java) |
 <!-- TRACKER_TABLE_END -->
