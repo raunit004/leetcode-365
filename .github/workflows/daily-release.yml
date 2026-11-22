@@ -2,7 +2,7 @@ name: Daily LeetCode Auto Release
 
 on:
   schedule:
-    # 00:30 UTC = 06:00 AM IST everyday
+    # 00:18 UTC = 05:48 AM IST everyday
     - cron: '18 0 * * *'
   workflow_dispatch: # Allows manual run anytime from GitHub Actions tab
 
@@ -23,9 +23,22 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install Social Generator Dependencies
+        run: |
+          pip install requests pygments playwright
+          playwright install chromium
+
       - name: Process Queued Solution
         run: |
           python scripts/release_next.py
+
+      - name: Generate Instagram Carousel & LinkedIn Card
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -f .commit_msg ]; then
+            python scripts/social_auto.py --generate
+          fi
 
       - name: Commit and Push
         run: |
@@ -41,3 +54,9 @@ jobs:
           else
             echo "Queue is empty. No release needed."
           fi
+
+      - name: Trigger Make.com Auto-Post
+        env:
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+        run: |
+          python scripts/social_auto.py --send
