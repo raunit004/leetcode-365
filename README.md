@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-78%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-78%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-79%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-79%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -14,9 +14,9 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | Metric | Count |
 | :--- | :--- |
 | 🟢 **Easy** | 29 |
-| 🟡 **Medium** | 39 |
+| 🟡 **Medium** | 40 |
 | 🔴 **Hard** | 10 |
-| 🎯 **Total Solved** | 78 / 365 |
+| 🎯 **Total Solved** | 79 / 365 |
 
 ---
 
@@ -102,4 +102,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 076 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Array | `Medium[cite: 21]` | $O(N)$ where $N$ is `intervals.length`[cite: 21] | $O(N)$ to build and return the merged array[cite: 21] | [Java](solutions/day-076-insert-interval/Solution.java) |
 | 077 | [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) | Array, Matrix, Simulation[cite: 22] | `Medium[cite: 22]` | $O(n^2)$ to populate all cells in the grid[cite: 22] | $O(1)$ auxiliary space (excluding the allocated $n \times n$ output matrix)[cite: 22] | [Java](solutions/day-077-spiral-matrix-ii/Solution.java) |
 | 078 | [Rotate List](https://leetcode.com/problems/rotate-list/) | Linked List, Two Pointers | `Medium[cite: 23]` | $O(N)$ where $N$ is the number of nodes in the linked list | $O(1)$ auxiliary space[cite: 23] | [Java](solutions/day-078-rotate-list/Solution.java) |
+| 079 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Math, Dynamic Programming, Combinatorics | `Medium[cite: 24]` | $O(m \times n)$[cite: 24] | $O(n)$ auxiliary space[cite: 24] | [Java](solutions/day-079-unique-paths/Solution.java) |
 <!-- TRACKER_TABLE_END -->
