@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-81%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-81%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-82%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-82%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 29 |
+| 🟢 **Easy** | 30 |
 | 🟡 **Medium** | 42 |
 | 🔴 **Hard** | 10 |
-| 🎯 **Total Solved** | 81 / 365 |
+| 🎯 **Total Solved** | 82 / 365 |
 
 ---
 
@@ -105,4 +105,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 079 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Math, Dynamic Programming, Combinatorics | `Medium[cite: 24]` | $O(m \times n)$[cite: 24] | $O(n)$ auxiliary space[cite: 24] | [Java](solutions/day-079-unique-paths/Solution.java) |
 | 080 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Array, Dynamic Programming, Matrix | `Medium[cite: 25]` | $O(m \times n)$[cite: 25] | $O(n)$ auxiliary space[cite: 25] | [Java](solutions/day-080-unique-paths-ii/Solution.java) |
 | 081 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Array, Dynamic Programming, Matrix | `Medium[cite: 25]` | $O(m \times n)$ where $m$ is row count and $n$ is column count[cite: 25] | $O(n)$ auxiliary space[cite: 25] | [Java](solutions/day-081-minimum-path-sum/Solution.java) |
+| 082 | [Employees Earning More Than Their Managers](https://leetcode.com/problems/employees-earning-more-than-their-managers/) | Database[cite: 25] | `Easy[cite: 25]` | $O(N)$ with primary key index lookup on `id` ($O(N^2)$ worst-case unindexed nested loop)[cite: 25] | $O(N)$ auxiliary space for intermediate join processing | [SQL](solutions/day-082-employees-earning-more-than-their-managers/Solution.sql) |
 <!-- TRACKER_TABLE_END -->
