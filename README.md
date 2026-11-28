@@ -2,8 +2,8 @@
 
 A dedicated engineering initiative to solve, analyze, and document one Data Structures & Algorithms problem every day for 365 consecutive days.
 
-![Days Completed](https://img.shields.io/badge/Days%20Completed-82%2F365-blue?style=for-the-badge)
-![Current Streak](https://img.shields.io/badge/Current%20Streak-82%20Days-brightgreen?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days%20Completed-83%2F365-blue?style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-83%20Days-brightgreen?style=for-the-badge)
 ![Primary Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -13,10 +13,10 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 
 | Metric | Count |
 | :--- | :--- |
-| 🟢 **Easy** | 30 |
+| 🟢 **Easy** | 31 |
 | 🟡 **Medium** | 42 |
 | 🔴 **Hard** | 10 |
-| 🎯 **Total Solved** | 82 / 365 |
+| 🎯 **Total Solved** | 83 / 365 |
 
 ---
 
@@ -106,4 +106,5 @@ A dedicated engineering initiative to solve, analyze, and document one Data Stru
 | 080 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Array, Dynamic Programming, Matrix | `Medium[cite: 25]` | $O(m \times n)$[cite: 25] | $O(n)$ auxiliary space[cite: 25] | [Java](solutions/day-080-unique-paths-ii/Solution.java) |
 | 081 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Array, Dynamic Programming, Matrix | `Medium[cite: 25]` | $O(m \times n)$ where $m$ is row count and $n$ is column count[cite: 25] | $O(n)$ auxiliary space[cite: 25] | [Java](solutions/day-081-minimum-path-sum/Solution.java) |
 | 082 | [Employees Earning More Than Their Managers](https://leetcode.com/problems/employees-earning-more-than-their-managers/) | Database[cite: 25] | `Easy[cite: 25]` | $O(N)$ with primary key index lookup on `id` ($O(N^2)$ worst-case unindexed nested loop)[cite: 25] | $O(N)$ auxiliary space for intermediate join processing | [SQL](solutions/day-082-employees-earning-more-than-their-managers/Solution.sql) |
+| 083 | [Customers Who Never Order](https://leetcode.com/problems/customers-who-never-order/) | Database[cite: 25] | `Easy[cite: 25]` | $O(C + O_{\text{cnt}})$ with indexed foreign key lookup / hash anti-join | $O(C + O_{\text{cnt}})$ auxiliary space for intermediate join buffering | [SQL](solutions/day-083-customers-who-never-order/Solution.sql) |
 <!-- TRACKER_TABLE_END -->
